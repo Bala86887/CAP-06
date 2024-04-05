@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI CALCULATER</title>
+    <style>
+        .la{font-size: 30px;}
+        input{height: 30px;width: 300px;margin-top: 15px;}
+        button{margin-top: 20px;}
+        .la,input,button,h1{margin-left: 600px;}
+        
+    </style>
+</head>
+<body>
+    <h1 id="display"></h1>
+    <lable class="la"  >put your weight in here(KG)</lable><br>
+    <input id="kgs"></input><br>
+    <lable class="la">And your height in here(CM)</lable><br>
+    <input id="height"><br>
+    <button id="button" onclick="bmi()">Check Your BMI</button>
+</body>
+</html>
+<script>
+let display=document.getElementById("display")
+let input1=document.getElementById("kgs")
+let input2=document.getElementById("height")
+
+function bmi(){
+let a=input1.value
+let b=input2.value/100
+let check=a/(b*b)
+if(check<=18.4){
+    display.innerText=`underweight${check}`
+}
+else if(check>=18.5&&check<=24.9){
+    display.innerText=`normal weight${check}`
+}
+else if(check>26)
+{
+    display.innerText=`overweight${check}`
+}
+}
+
+</script>

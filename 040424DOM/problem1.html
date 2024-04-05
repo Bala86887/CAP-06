@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini calculater</title>
+    <style>
+        #container>input{width: 200px;height: 30px;margin-left: 15px;margin-top: 50px;}
+#parentone{height: 300px;width: 600px;border: red solid 2px;margin: auto;}
+#container2>button{margin-left: 25px;font-size: 15px;margin-top: 50px;height: 50px;width: 100px;}
+    </style>
+</head>
+<body>
+    <div id="parentone">
+        <h1 style="text-align: center;">Mini Calculater</h1>
+    <div id="container">
+
+
+    </div>
+    <div id="container2"></div>
+    </div>
+</body>
+</html>
+
+<script>
+let getone=document.getElementById("container")
+let gettwo=document.getElementById("container2")
+let input1=document.createElement("input")
+input1.placeholder="Enter Your First Number"
+let input2=document.createElement("input")
+input2.placeholder="Enter Your Second Number"
+getone.append(input1,input2)
+
+let add=document.createElement("button")
+add.innerText="Addition"
+
+let subract=document.createElement("button")
+subract.innerHTML="subract"
+let multiply=document.createElement("button")
+multiply.innerText="multiplication"
+let division=document.createElement("button")
+division.innerText="Division"
+gettwo.append(add,subract,multiply,division)
+
+add.addEventListener("click",addition)
+subract.addEventListener("click",subraction)
+multiply.addEventListener("click",multiplication)
+division.addEventListener("click",div)
+
+
+function addition(){
+
+    let one=Number(input1.value)+Number(input2.value)
+    console.log(one)
+}
+
+
+function subraction(){
+
+let two=input1.value-input2.value
+console.log(two)
+}
+
+function multiplication(){
+
+let three=input1.value*input2.value
+console.log(three)
+}
+
+function div(){
+
+let four=input1.value/input2.value
+console.log(four)
+}
+
+</script>

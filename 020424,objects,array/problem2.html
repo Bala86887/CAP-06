@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+</body>
+</html>
+<script>
+let one=    ["Rice", "Dal", "Salt"]
+let two=[2, 3, 1]
+let three=[60, 50, 20]
+
+let array=[]
+for(let i=0;i<one.length;i++){
+
+let obj={}
+obj.name=one[i]
+obj.quantity=two[i]
+obj.price=three[i]
+
+array.push(obj)
+}
+
+
+
+let object={
+data:array,
+check:function(){
+    let sum=0
+    for(let i=0;i<this.data.length;i++){
+      
+       sum=sum+ this.data[i].quantity*this.data[i].price
+      
+    }
+
+    console.log(sum)
+
+}
+
+
+
+}
+
+object.check()
+
+</script>
